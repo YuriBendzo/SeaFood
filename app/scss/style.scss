@@ -1,0 +1,151 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+.header{
+    &__top{
+       display: flex;
+       justify-content: space-between;
+       padding-top: 27px; 
+    }
+    &__content{
+        background-image: url(../images/header-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        padding-bottom: 20px;
+        margin-top: -100px;
+        min-height: calc(100vh - 50px);
+    }
+    &-slider{
+        max-width: 522px;
+        padding-left: 112px;
+        padding-top: 57px;
+        padding-bottom: 135px;
+    }
+    &-slider__text{
+        margin-bottom: 25px;
+        font-size: 18px;
+        line-height: 22px;
+        color: #fff;
+    }
+    &__content-btn{
+        font-family: 'Roboto Slab', serif;
+        font-weight: 700;
+        color: #fff;
+        font-size: 24px;
+        line-height: 32px;
+        padding: 14px 88px;
+        border-radius: 20px;
+        background-color: rgba($color: #fff, $alpha: .5);
+        margin-left: 112px;
+        display: inline-block;
+        transform: translateY(-100px);
+    }
+    &__content-box{
+        display: flex;
+        margin-left: 100%;
+        margin-right: 30px;
+        font-size: 18px;
+        line-height: 21px;
+        color: #fff;
+    }
+    &__content-link--active{
+        font-weight: 700;
+    }
+}
+
+.slick-prev,
+.slick-next{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    left: 40px;
+}
+
+.slick-prev{
+    top: 0;
+}
+
+.slick-next{
+    bottom: 0;
+}
+
+.slick-dots{
+    position: absolute;
+    left: 35px;
+    top: 58px;
+    bottom: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slick-dots button{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+    line-height: 28px;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.slick-active button{
+    opacity: 1;
+}
+
+.slick-dots button::before{
+    content: '0';
+}
+
+.slick-dots li:nth-child(n + 10) button::before{
+    content: '';
+}
+
+.logo{
+    margin-right: 16px;
+}
+
+.phone{
+    margin-left: 43px;
+    margin-top: 11px;
+}
+
+.menu{
+    margin-top: 16px;
+    &__list{
+        display: flex;
+    }
+    &__item + &__item{
+        margin-left: 30px;
+    }
+    &__link{
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #001E64;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    &__link:hover{
+        border-bottom: 1px solid #001E64;
+    }
+}
+
+.title{
+    font-family: 'Roboto slab', serif;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 95px;
+    color: #001E64;
+    max-width: 589px;
+    padding-top: 170px;
+    padding-left: 112px;
+    margin-bottom: 60px;
+}
+
