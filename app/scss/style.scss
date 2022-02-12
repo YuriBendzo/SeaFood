@@ -44,6 +44,11 @@
         display: inline-block;
         transform: translateY(-100px);
     }
+    &__content-btn:hover{
+        background-color: #fff;
+        color: #001E64;
+        transition: all .5s;
+    }
     &__content-box{
         display: flex;
         margin-left: 100%;
@@ -138,7 +143,7 @@
 }
 
 .title{
-    font-family: 'Roboto slab', serif;
+    font-family: 'Roboto Slab', serif;
     font-weight: 700;
     font-size: 72px;
     line-height: 95px;
@@ -149,3 +154,88 @@
     margin-bottom: 60px;
 }
 
+.product{
+    padding-top: 100px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__name{
+        max-width: 510px;
+        text-align: center;
+        padding-top: 41px;
+    }
+    &__name-item{
+        margin-bottom: 30px;
+        font-family: 'Roboto Slab', serif;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 400;
+        cursor: pointer;
+    }
+    &__content{
+        max-width: 600px;
+    }
+    &-prev{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &-prev,
+    &-next{
+        border: none;
+        background-color: transparent;
+        padding: 0;
+    }
+    &__content-box{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__content-img{
+        object-fit: cover;
+    }
+    &__content-list{
+        width: 291px;
+    }
+    &__content-descr{
+        margin-bottom: 30px;
+    }
+    &__content-descr span{
+        display: block;
+        margin-bottom: 10px;
+        color: #001E64;
+    }
+    &__content-title{
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color: #001E64;
+        margin-bottom: 20px;
+        padding-top: 20px;
+        font-family: 'Roboto Slab', serif;
+    }
+    &__content-text{
+        margin-bottom: 25px;
+    }
+    &__content-btn{
+        display: inline-block;
+        color: #001E64;
+        font-family: 'Roboto Slab', serif;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+        padding: 12px 85px;
+        background-color: transparent;
+        text-transform: uppercase;
+        border: 1px solid #001E64;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+}
+
+.slick-current .product__name-item{
+    font-weight: 700;
+    font-size: 36px;
+    color: #001E64;
+}
