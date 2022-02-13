@@ -43,15 +43,15 @@
         margin-left: 112px;
         display: inline-block;
         transform: translateY(-100px);
+        transition: all .5s;
     }
     &__content-btn:hover{
         background-color: #fff;
         color: #001E64;
-        transition: all .5s;
     }
     &__content-box{
         display: flex;
-        margin-left: 100%;
+        justify-content: flex-end;
         margin-right: 30px;
         font-size: 18px;
         line-height: 21px;
@@ -140,7 +140,38 @@
     &__link:hover{
         border-bottom: 1px solid #001E64;
     }
+    &__btn{
+        width: 40px;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        cursor: pointer;
+        padding: 12px 0;
+        position: relative;
+        display: none;
+    }
+    &__btn::after,
+    &__btn::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: #001E64;
+    }
+    &__btn::before{
+        top: 0;
+    }
+    &__btn::after{
+        bottom: 0;
+    }
+    &__btn span{
+        display: block;
+        height: 4px;
+        background-color: #001E64;
+    }
 }
+
 
 .title{
     font-family: 'Roboto Slab', serif;
@@ -231,6 +262,11 @@
         border: 1px solid #001E64;
         border-radius: 20px;
         cursor: pointer;
+        transition: all .3s;
+    }
+    &__content-btn:hover{
+        background-color: #001E64;
+        color: #fff;
     }
 }
 
@@ -274,8 +310,6 @@
 
 .seafood {
     margin-bottom: 50px;
-    &__items{
-    }
     &__item{
         display: flex;
         justify-content: space-between;
@@ -345,11 +379,40 @@
     &__box-item{
         margin-top: 30px;
     }
-    &__box-item span{
+}
 
+.footer{
+    padding-bottom: 110px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__inner .menu{
+        padding-bottom: 30px;
+    }
+    &__inner .logo{
+        margin-right: 0;
+    }
+}
+
+.footer-social{
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 19px !important;
+    }
+    &__item + &__item{
+        margin-left: 10px;
+    }
+    &__link path{
+        transition: all .3s;
+    }
+    &__link:hover path{
+        fill: #001E64;
     }
 }
 
 
-
+@import 'media';
 
