@@ -27,6 +27,27 @@ $(function () {
         vertical: true,
         prevArrow: '<button type="button" class="product-prev"><img src="images/product-prev.svg" alt=""></button>',
         nextArrow: '<button type="button" class="product-next"><img src="images/product-next.svg" alt=""></button>',
+        responsive: [
+            {
+                breakpoint: 891,
+                settings: {
+                    vertical: false,
+                    arrows: false,
+                    slidesToShow: 3,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 501,
+                settings: {
+                    vertical: false,
+                    arrows: false,
+                    slidesToShow: 1,
+                    dots: true
+                }
+            }
+
+        ]
     });
 
     $('.product__content').slick({
